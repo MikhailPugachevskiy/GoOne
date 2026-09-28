@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go One | Customer Pain Points</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Source+Sans+3:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Page stylesheet is added in the CSS round; the empty link keeps the HTML structure stable -->
+    <link rel="stylesheet" href="../css/problem.css">
+</head>
+
+<body>
+    <!-- Site header: brand plus chapter navigation; Flexbox will align this row in CSS -->
+    <header class="site-header">
+        <a class="brand" href="landing.html">Go One</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            Menu
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="landing.html">Home</a></li>
+                <li><a class="nav-link" href="market.html">Market</a></li>
+                <li><a class="nav-link is-active" href="problem.html">Problem</a></li>
+                <li><a class="nav-link" href="solution.html">Solution</a></li>
+                <li><a class="nav-link" href="product.html">How it works</a></li>
+                <li><a class="nav-link" href="business.html">Business</a></li>
+                <li><a class="nav-link" href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Chapter hero: market thesis and entry into the boom story -->
+        <section class="hero">
+            <p class="eyebrow">Chapter 1 · Market</p>
+            <h1>Bike-sharing is booming</h1>
+            <p class="lead">
+                More than 1,250 providers already operate worldwide, with over 10 million shared bikes
+                on the street. The market is expected to grow by about 20% per year toward a
+                EUR 7–8 billion industry.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="problem.html">See the pain points</a>
+                <a class="btn btn-ghost" href="landing.html">Back to home</a>
+            </div>
+        </section>
+
+        <!-- Market proof grid: four headline figures from the pitch deck -->
+        <section class="proof-strip" aria-label="Market figures">
+            <article class="proof-card">
+                <p class="proof-value">1,250+</p>
+                <p class="proof-label">Bike-sharing providers worldwide</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">10M+</p>
+                <p class="proof-label">Shared bikes already in use</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">EUR 7–8bn</p>
+                <p class="proof-label">Expected market size at 20% yearly growth</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">USD 2.2bn</p>
+                <p class="proof-label">Capital from Alibaba, DST Global and others</p>
+            </article>
+        </section>
+
+        <!-- Demand block: why riders already behave like a high-frequency market -->
+        <section class="teaser">
+            <h2>Demand is already habitual</h2>
+            <p class="section-intro">
+                In our own survey (N = 104), 40.4% of bike-sharing users rent a bike more than once
+                a week. That is not a one-off tourist product. It is weekly urban mobility.
+            </p>
+            <div class="teaser-grid">
+                <article class="teaser-card">
+                    <h3>High use frequency</h3>
+                    <p>Four in ten surveyed riders rent more than once a week, so switching costs between apps add up
+                        fast.</p>
+                </article>
+                <article class="teaser-card">
+                    <h3>Investor attention</h3>
+                    <p>Alibaba, DST Global and other funds have already put more than USD 2.2 billion into the category.
+                    </p>
+                </article>
+                <article class="teaser-card">
+                    <h3>Fragmented supply</h3>
+                    <p>Over 1,250 operators exist globally. Riders in one city often face several apps at once.</p>
+                </article>
+                <article class="teaser-card">
+                    <h3>Perfect timing</h3>
+                    <p>Shared mobility is expanding beyond bikes into e-scooters. An aggregator can grow with the
+                        category.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Growth narrative: what the boom means for Go One -->
+        <section class="founders">
+            <h2>What this boom means for Go One</h2>
+            <p class="section-intro">
+                Providers are multiplying. Capital is already in the market. Users ride often.
+                The missing layer is not another operator. It is one map across all of them.
+            </p>
+            <div class="founder-row">
+                <article class="founder-chip">
+                    <p class="founder-role">Supply</p>
+                    <p class="founder-name">Many local and global operators, little overview</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">Capital</p>
+                    <p class="founder-name">Billions already committed to bike-sharing</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">Habit</p>
+                    <p class="founder-name">Weekly rentals, not occasional trips</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">Gap</p>
+                    <p class="founder-name">No aggregator for price, distance and checkout</p>
+                </article>
+            </div>
+            <a class="text-link" href="problem.html">Next: the customer pain points</a>
+        </section>
+
+
+    </main>
+
+    <!-- Footer with chapter shortcuts; Flexbox will split brand and links -->
+    <footer class="site-footer">
+        <p class="footer-brand">Go One · Build your own business</p>
+        <nav aria-label="Footer">
+            <a href="landing.html">Home</a>
+            <a href="problem.html">Problem</a>
+            <a href="team.html">Team</a>
+        </nav>
+    </footer>
+
+    <!-- TypeScript compiled to JS is wired here in a later round -->
+    <script src="../ts/market.js"></script>
+
+</body>
+
+</html>
