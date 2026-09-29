@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go One | Customer Pain Points</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Source+Sans+3:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Page stylesheet is added in the CSS round; the empty link keeps the HTML structure stable -->
+    <link rel="stylesheet" href="../css/problem.css">
+</head>
+
+<body>
+    <!-- Site header: brand plus chapter navigation; Flexbox will align this row in CSS -->
+    <header class="site-header">
+        <a class="brand" href="landing.html">Go One</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            Menu
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="landing.html">Home</a></li>
+                <li><a class="nav-link" href="market.html">Market</a></li>
+                <li><a class="nav-link is-active" href="problem.html">Problem</a></li>
+                <li><a class="nav-link" href="solution.html">Solution</a></li>
+                <li><a class="nav-link" href="product.html">How it works</a></li>
+                <li><a class="nav-link" href="business.html">Business</a></li>
+                <li><a class="nav-link" href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Chapter hero: the gap between a booming market and a frustrating rider experience -->
+        <section class="hero">
+            <p class="eyebrow">Chapter 2 · Problem</p>
+            <h1>The market is growing. The rider experience is not.</h1>
+            <p class="lead">
+                Bike-sharing is everywhere, but the customer journey is split across apps.
+                There is no combined map, no price comparison, and no single account.
+                Finding a bike still costs time.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="solution.html">See the Go One fix</a>
+                <a class="btn btn-ghost" href="market.html">Back to market</a>
+            </div>
+        </section>
+
+        <!-- Pain proof grid: survey signal plus the four core frictions from the pitch -->
+        <section class="proof-strip" aria-label="Pain point figures">
+            <article class="proof-card">
+                <p class="proof-value">26.5%</p>
+                <p class="proof-label">Users who already keep more than one bike-sharing app</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">0</p>
+                <p class="proof-label">Aggregated overview across providers today</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">0</p>
+                <p class="proof-label">Direct price comparison before unlocking</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">N = 104</p>
+                <p class="proof-label">Own survey behind the multi-app finding</p>
+            </article>
+        </section>
+
+        <!-- Four pain cards: the everyday frictions riders face before Go One -->
+        <section class="teaser">
+            <h2>Four frictions. One broken journey.</h2>
+            <p class="section-intro">
+                Riders do not lack bikes. They lack a single place to see them, compare them,
+                pay once, and leave. 26.5% of surveyed users already juggle more than one app.
+            </p>
+            <div class="teaser-grid">
+                <article class="teaser-card">
+                    <h3>No aggregated overview</h3>
+                    <p>Each operator shows only its own fleet. The closest bike may sit in another app you never opened.
+                    </p>
+                </article>
+                <article class="teaser-card">
+                    <h3>No price comparison</h3>
+                    <p>Fares stay hidden until you switch apps. Riders cannot scan the cheapest ride in one glance.</p>
+                </article>
+                <article class="teaser-card">
+                    <h3>Time-consuming search</h3>
+                    <p>Opening, locating, and discarding apps turns a two-minute trip into a hunting exercise.</p>
+                </article>
+                <article class="teaser-card">
+                    <h3>Different accounts</h3>
+                    <p>Every provider wants its own login, payment method, and lock flow. One city, several identities.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Consequence block: why these pain points matter for a weekly rider -->
+        <section class="founders">
+            <h2>Why this hurts more than it looks</h2>
+            <p class="section-intro">
+                If four in ten users rent more than once a week, every extra tap is repeated.
+                Fragmentation is not a one-time annoyance. It is a tax on daily mobility.
+            </p>
+            <div class="founder-row">
+                <article class="founder-chip">
+                    <p class="founder-role">Map</p>
+                    <p class="founder-name">No shared view of all nearby bikes</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">Price</p>
+                    <p class="founder-name">No side-by-side fare check</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">Time</p>
+                    <p class="founder-name">App-hopping instead of riding</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">Account</p>
+                    <p class="founder-name">Several logins for one short trip</p>
+                </article>
+            </div>
+            <a class="text-link" href="solution.html">Next: how Go One removes these frictions</a>
+        </section>
+
+
+    </main>
+
+    <!-- Footer with chapter shortcuts; Flexbox will split brand and links -->
+    <footer class="site-footer">
+        <p class="footer-brand">Go One · Build your own business</p>
+        <nav aria-label="Footer">
+            <a href="market.html">Market</a>
+            <a href="solution.html">Solution</a>
+            <a href="team.html">Team</a>
+        </nav>
+    </footer>
+
+    <!-- TypeScript compiled to JS is wired here in a later round -->
+    <script src="../ts/problem.js"></script>
+
+</body>
+
+</html>
