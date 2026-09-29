@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go One | How It Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Source+Sans+3:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Page stylesheet is added in the CSS round; the empty link keeps the HTML structure stable -->
+    <link rel="stylesheet" href="../css/product.css">
+</head>
+
+<body>
+    <!-- Site header: brand plus chapter navigation; Flexbox will align this row in CSS -->
+    <header class="site-header">
+        <a class="brand" href="landing.html">Go One</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            Menu
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="landing.html">Home</a></li>
+                <li><a class="nav-link" href="market.html">Market</a></li>
+                <li><a class="nav-link" href="problem.html">Problem</a></li>
+                <li><a class="nav-link" href="solution.html">Solution</a></li>
+                <li><a class="nav-link is-active" href="product.html">How it works</a></li>
+                <li><a class="nav-link" href="business.html">Business</a></li>
+                <li><a class="nav-link" href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Chapter hero: Go One as the single layer on top of every bike-sharing app -->
+        <section class="hero">
+            <p class="eyebrow">Chapter 3 · Solution</p>
+            <h1>Our solution is Go One</h1>
+            <p class="lead">
+                One app that combines every bike-sharing provider. Riders get an aggregated map,
+                a live price comparison, one account, and a faster path to the nearest bike.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="product.html">See how it works</a>
+                <a class="btn btn-ghost" href="problem.html">Back to the problem</a>
+            </div>
+        </section>
+
+        <!-- Demand proof grid: what surveyed riders said they want in one app -->
+        <section class="proof-strip" aria-label="Feature demand figures">
+            <article class="proof-card">
+                <p class="proof-value">80%</p>
+                <p class="proof-label">Want an aggregated overview of all nearby bikes</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">73%</p>
+                <p class="proof-label">Want a direct price comparison across providers</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">93%</p>
+                <p class="proof-label">Want one account instead of several logins</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">89%</p>
+                <p class="proof-label">Say distance to the closest bike is very important</p>
+            </article>
+        </section>
+
+        <!-- Four value cards: each Go One feature answers one friction from the problem page -->
+        <section class="teaser">
+            <h2>Four answers. One app.</h2>
+            <p class="section-intro">
+                After asking survey participants which features they would value, the picture was clear:
+                overview, price, a single account, and time. Go One is built around those four.
+            </p>
+            <div class="teaser-grid">
+                <article class="teaser-card">
+                    <h3>Aggregated overview</h3>
+                    <p>All partner bikes appear on one map. 80% of respondents wanted this combined view.</p>
+                </article>
+                <article class="teaser-card">
+                    <h3>Price comparison</h3>
+                    <p>Filter for the lowest fare or a favourite operator before you unlock. 73% asked for this.</p>
+                </article>
+                <article class="teaser-card">
+                    <h3>One account</h3>
+                    <p>Pay by card or PayPal once. 93% wanted a single login across every provider.</p>
+                </article>
+                <article class="teaser-card">
+                    <h3>Time saved</h3>
+                    <p>The nearest bike is often from another operator. Go One shows the ride that is actually closest.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Distance insight: why a combined map beats staying inside one operator app -->
+        <section class="founders">
+            <h2>The closest bike is rarely “your” bike</h2>
+            <p class="section-intro">
+                In Berlin, the average distance to any shared bike is 48 metres.
+                Stay inside one app and the gap jumps. For LimeBike, the next identical bike sits
+                about 145 metres away, while a competitor bike is only about 30 metres away.
+            </p>
+            <div class="founder-row">
+                <article class="founder-chip">
+                    <p class="founder-role">Any provider</p>
+                    <p class="founder-name">48 m to the next bike in Berlin</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">Same provider</p>
+                    <p class="founder-name">145 m to the next LimeBike</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">Competitor</p>
+                    <p class="founder-name">30 m to the next rival bike</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">User priority</p>
+                    <p class="founder-name">89% care strongly about distance</p>
+                </article>
+            </div>
+            <a class="text-link" href="product.html">Next: find, pay, and unlock in five steps</a>
+        </section>
+
+    </main>
+
+    <!-- Footer with chapter shortcuts; Flexbox will split brand and links -->
+    <footer class="site-footer">
+        <p class="footer-brand">Go One · Build your own business</p>
+        <nav aria-label="Footer">
+            <a href="problem.html">Problem</a>
+            <a href="product.html">How it works</a>
+            <a href="team.html">Team</a>
+        </nav>
+    </footer>
+
+    <!-- TypeScript compiled to JS is wired here in a later round -->
+    <script src="../ts/solution.js"></script>
+
+</body>
+
+</html>
