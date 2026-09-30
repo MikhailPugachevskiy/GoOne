@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go One | Business Case</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Source+Sans+3:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Page stylesheet is added in the CSS round; the empty link keeps the HTML structure stable -->
+    <link rel="stylesheet" href="../css/business.css">
+</head>
+
+<body>
+    <!-- Site header: brand plus chapter navigation; Flexbox will align this row in CSS -->
+    <header class="site-header">
+        <a class="brand" href="landing.html">Go One</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            Menu
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="landing.html">Home</a></li>
+                <li><a class="nav-link" href="market.html">Market</a></li>
+                <li><a class="nav-link" href="problem.html">Problem</a></li>
+                <li><a class="nav-link" href="solution.html">Solution</a></li>
+                <li><a class="nav-link" href="product.html">How it works</a></li>
+                <li><a class="nav-link is-active" href="business.html">Business</a></li>
+                <li><a class="nav-link" href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Chapter hero: one app to scan every provider, then five steps to the ride -->
+        <section class="hero">
+            <p class="eyebrow">Chapter 4 · How it works</p>
+            <h1>You only need one app to scan every shared bike</h1>
+            <p class="lead">
+                Open Go One, see every partner fleet on one map, filter, pay once,
+                and unlock. Nextbike, Mobike, LimeBike and others sit in a single flow.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="business.html">See the business case</a>
+                <a class="btn btn-ghost" href="solution.html">Back to the solution</a>
+            </div>
+        </section>
+
+        <!-- Journey strip: the five product steps from map to unlocked bike -->
+        <section class="proof-strip" aria-label="Product steps">
+            <article class="proof-card">
+                <p class="proof-value">1</p>
+                <p class="proof-label">See every available bike in your area</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">2</p>
+                <p class="proof-label">Filter by provider or by lowest price</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">3</p>
+                <p class="proof-label">Choose the bike you want to ride</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">4–5</p>
+                <p class="proof-label">Pay in-app, then unlock with QR or code</p>
+            </article>
+        </section>
+
+        <!-- Step detail: each card expands one action inside the Go One flow -->
+        <section class="teaser">
+            <h2>Find your bike with Go One</h2>
+            <p class="section-intro">
+                Instead of jumping between apps, riders complete the whole trip in one place:
+                scan the street, narrow the list, pick a bike, pay, and unlock.
+            </p>
+            <div class="teaser-grid">
+                <article class="teaser-card">
+                    <h3>1. Overview</h3>
+                    <p>All available bikes from partner providers appear in your area on one map.</p>
+                </article>
+                <article class="teaser-card">
+                    <h3>2. Filters</h3>
+                    <p>Narrow the map by a specific operator or by the lowest price before you walk.</p>
+                </article>
+                <article class="teaser-card">
+                    <h3>3. Choose</h3>
+                    <p>Select the bike that is closest, cheapest, or from the brand you already trust.</p>
+                </article>
+                <article class="teaser-card">
+                    <h3>4. Pay</h3>
+                    <p>Checkout stays inside Go One. Pay by credit card or PayPal with the same account.</p>
+                </article>
+                <article class="teaser-card">
+                    <h3>5. Unlock</h3>
+                    <p>Scan the QR code on the bike and receive a numerical lock code to start the ride.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Coverage block: which fleets the scanner is built to combine -->
+        <section class="founders">
+            <h2>One scan across the fleets people already use</h2>
+            <p class="section-intro">
+                The product is an aggregator, not another operator. Go One sits on top of
+                the apps riders already know and routes them to the bike that is actually nearest.
+            </p>
+            <div class="founder-row">
+                <article class="founder-chip">
+                    <p class="founder-role">Local</p>
+                    <p class="founder-name">Nextbike · Call a Bike · LIDL-Bike</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">Global</p>
+                    <p class="founder-name">Mobike · LimeBike · Byke</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">Pay</p>
+                    <p class="founder-name">Credit card or PayPal in one checkout</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">Unlock</p>
+                    <p class="founder-name">QR scan plus numerical lock code</p>
+                </article>
+            </div>
+            <a class="text-link" href="business.html">Next: customers, competition, and the plan</a>
+        </section>
+
+    </main>
+
+    <!-- Footer with chapter shortcuts; Flexbox will split brand and links -->
+    <footer class="site-footer">
+        <p class="footer-brand">Go One · Build your own business</p>
+        <nav aria-label="Footer">
+            <a href="solution.html">Solution</a>
+            <a href="business.html">Business</a>
+            <a href="team.html">Team</a>
+        </nav>
+    </footer>
+
+    <!-- TypeScript compiled to JS is wired here in a later round -->
+    <script src="../ts/product.js"></script>
+
+</body>
+
+</html>
