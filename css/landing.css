@@ -53,3 +53,21 @@ a {
 img {
     max-width: 100%;
 }
+
+/* Fixed header: Flexbox row with brand left and chapter links right */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    min-height: var(--header-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 6vw;
+    background: rgba(7, 20, 17, 0.78);
+    border-bottom: 1px solid var(--stroke);
+    backdrop-filter: blur(16px);
+}
