@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go One | The Founding Team</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Source+Sans+3:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Page stylesheet is added in the CSS round; the empty link keeps the HTML structure stable -->
+    <link rel="stylesheet" href="../css/team.css">
+</head>
+
+<body>
+    <!-- Site header: brand plus chapter navigation; Flexbox will align this row in CSS -->
+    <header class="site-header">
+        <a class="brand" href="landing.html">Go One</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            Menu
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="landing.html">Home</a></li>
+                <li><a class="nav-link" href="market.html">Market</a></li>
+                <li><a class="nav-link" href="problem.html">Problem</a></li>
+                <li><a class="nav-link" href="solution.html">Solution</a></li>
+                <li><a class="nav-link" href="product.html">How it works</a></li>
+                <li><a class="nav-link" href="business.html">Business</a></li>
+                <li><a class="nav-link is-active" href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Chapter hero: customers, competitors, timeline, and the funding ask -->
+        <section class="hero">
+            <p class="eyebrow">Chapter 5 · Business</p>
+            <h1>Customers, competition, and the path to break-even</h1>
+            <p class="lead">
+                Go One stands on two pillars: bike-sharing providers and their riders.
+                We enter with an MVP, grow coverage, then raise two rounds of EUR 200,000
+                to reach break-even in 2021.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="team.html">Meet the founders</a>
+                <a class="btn btn-ghost" href="product.html">Back to the product</a>
+            </div>
+        </section>
+
+        <!-- Business proof grid: rider profile plus the first monetisation rate -->
+        <section class="proof-strip" aria-label="Business figures">
+            <article class="proof-card">
+                <p class="proof-value">50%</p>
+                <p class="proof-label">Users aged 25–44, the core urban rider group</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">71%</p>
+                <p class="proof-label">Male users in the Nextbike rider profile</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">65%</p>
+                <p class="proof-label">Academics — bike-sharing is strong among students</p>
+            </article>
+            <article class="proof-card">
+                <p class="proof-value">€0.01–0.015</p>
+                <p class="proof-label">Fee per redirected user, then per booked ride</p>
+            </article>
+        </section>
+
+        <!-- Market design: who we sell to, who we fight, and how we win -->
+        <section class="teaser">
+            <h2>Two customer pillars. A clear competitive play.</h2>
+            <p class="section-intro">
+                Providers supply the bikes. Riders supply the demand. Competitors already
+                try to sit in the middle. Go One wins by shipping an MVP first, locking in
+                operator relationships, and offering one account instead of extra sign-ups.
+            </p>
+            <div class="teaser-grid">
+                <article class="teaser-card">
+                    <h3>Providers</h3>
+                    <p>German anchors such as Nextbike and Call a Bike, plus Mobike, LimeBike, Byke and Donkey Republic.
+                    </p>
+                </article>
+                <article class="teaser-card">
+                    <h3>Riders</h3>
+                    <p>Young to mid-age urban users: about half are 25–44, 71% male, 65% with an academic background.
+                    </p>
+                </article>
+                <article class="teaser-card">
+                    <h3>Competitors</h3>
+                    <p>Direct rivals are urbi and Free2Move. Bikeee is a low-functionality newcomer. Foreign apps have
+                        little German presence.</p>
+                </article>
+                <article class="teaser-card">
+                    <h3>How we compete</h3>
+                    <p>Go to market with the MVP, foster provider partnerships, and raise usefulness with a single Go
+                        One account.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Plan block: MVP, version 2.0, expansion, and the two investment rounds -->
+        <section class="founders">
+            <h2>From MVP to European roll-out</h2>
+            <p class="section-intro">
+                The first product shows nearby bikes and redirects riders to the operator.
+                Version 2.0 adds one-account booking. Europe is assumed to grow about 1.5%
+                per month. Targets: up to 20% share in Germany and up to 5% in selected markets.
+            </p>
+            <div class="founder-row">
+                <article class="founder-chip">
+                    <p class="founder-role">MVP</p>
+                    <p class="founder-name">Launch at year-end: map plus redirect</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">Version 2.0</p>
+                    <p class="founder-name">One account, priced at €0.015 per booking</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">Break-even</p>
+                    <p class="founder-name">2021 with AT, CH and FR expansion</p>
+                </article>
+                <article class="founder-chip">
+                    <p class="founder-role">Funding</p>
+                    <p class="founder-name">€200k for 20%, then €200k for 10%</p>
+                </article>
+            </div>
+            <a class="text-link" href="team.html">Next: the four founders behind Go One</a>
+        </section>
+
+    </main>
+
+    <!-- Footer with chapter shortcuts; Flexbox will split brand and links -->
+    <footer class="site-footer">
+        <p class="footer-brand">Go One · Build your own business</p>
+        <nav aria-label="Footer">
+            <a href="product.html">How it works</a>
+            <a href="team.html">Team</a>
+            <a href="landing.html">Home</a>
+        </nav>
+    </footer>
+
+    <!-- TypeScript compiled to JS is wired here in a later round -->
+    <script src="../ts/business.js"></script>
+
+</body>
+
+</html>
