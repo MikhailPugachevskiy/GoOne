@@ -210,3 +210,21 @@ img {
     padding: 1.4rem 1.2rem;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
+
+/* Teaser grid: two-by-two story cards with a hover glow edge */
+.teaser,
+.founders {
+    padding: 4vh 6vw 8vh;
+}
+
+.teaser h2,
+.founders h2 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.section-intro {
+    max-width: 68ch;
+    color: var(--muted);
+    margin: 0 0 2rem;
+}
