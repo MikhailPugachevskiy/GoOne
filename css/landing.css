@@ -168,3 +168,23 @@ img {
 .btn:hover {
     transform: translateY(-3px);
 }
+
+.btn-primary {
+    color: #062016;
+    background: linear-gradient(135deg, var(--accent), #c8ffe0);
+    box-shadow: 0 10px 30px rgba(125, 255, 179, 0.28);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 16px 40px rgba(125, 255, 179, 0.45);
+}
+
+.btn-ghost {
+    color: var(--ink);
+    border: 1px solid var(--stroke);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.btn-ghost:hover {
+    border-color: var(--accent);
+}
