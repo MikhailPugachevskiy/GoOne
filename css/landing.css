@@ -228,3 +228,16 @@ img {
     color: var(--muted);
     margin: 0 0 2rem;
 }
+
+.teaser-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+}
+
+.teaser-card {
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
