@@ -188,3 +188,25 @@ img {
 .btn-ghost:hover {
     border-color: var(--accent);
 }
+
+/* Proof strip: four market facts in a responsive CSS Grid */
+.proof-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 0 6vw 6vh;
+}
+
+.proof-card,
+.teaser-card,
+.founder-chip {
+    background: var(--card);
+    border: 1px solid var(--stroke);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.proof-card {
+    padding: 1.4rem 1.2rem;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
