@@ -14,3 +14,42 @@
     --font-display: "Outfit", sans-serif;
     --font-body: "Source Sans 3", sans-serif;
 }
+
+/* Base page setup: dark canvas, readable type, room for the fixed header */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--ink);
+    background:
+        radial-gradient(circle at 12% -10%, rgba(125, 255, 179, 0.16), transparent 42%),
+        radial-gradient(circle at 90% 8%, rgba(31, 143, 90, 0.22), transparent 36%),
+        var(--bg);
+    padding-top: var(--header-h);
+}
+
+h1,
+h2,
+h3,
+.brand,
+.proof-value,
+.btn {
+    font-family: var(--font-display);
+}
+
+a {
+    color: var(--accent);
+}
+
+img {
+    max-width: 100%;
+}
