@@ -53,3 +53,72 @@ a {
 img {
     max-width: 100%;
 }
+
+/* Sichtbarer Tastaturfokus für alle Links und Buttons */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* Fixed header: Flexbox row with brand left and chapter links right */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    min-height: var(--header-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 6vw;
+    background: rgba(7, 20, 17, 0.78);
+    border-bottom: 1px solid var(--stroke);
+    backdrop-filter: blur(16px);
+}
+
+.brand {
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    color: var(--ink);
+}
+
+.nav-toggle {
+    display: none;
+    border: 1px solid var(--stroke);
+    background: transparent;
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
+    cursor: pointer;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding-bottom: 0.15rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.is-active {
+    color: var(--accent);
+    border-color: var(--accent);
+    text-shadow: 0 0 18px rgba(125, 255, 179, 0.45);
+}
