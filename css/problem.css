@@ -1,0 +1,52 @@
+/* Design tokens: same as landing.css and market.css, plus one warm "pain" tone for this chapter */
+:root {
+    --bg: #071411;
+    --bg-elevated: #0e2420;
+    --ink: #f4fff8;
+    --muted: #b7cfc4;
+    --accent: #7dffb3;
+    --accent-deep: #1f8f5a;
+    --pain: #ffb27d;
+    --card: rgba(14, 36, 32, 0.72);
+    --stroke: rgba(125, 255, 179, 0.18);
+    --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    --radius: 18px;
+    --header-h: 72px;
+    --font-display: "Outfit", sans-serif;
+    --font-body: "Source Sans 3", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--ink);
+    background:
+        radial-gradient(circle at 12% -10%, rgba(125, 255, 179, 0.16), transparent 42%),
+        radial-gradient(circle at 90% 8%, rgba(31, 143, 90, 0.22), transparent 36%),
+        var(--bg);
+    padding-top: var(--header-h);
+}
+
+h1,
+h2,
+h3,
+.brand,
+.proof-value,
+.btn {
+    font-family: var(--font-display);
+}
+
+a {
+    color: var(--accent);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Visible keyboard focus for all links and buttons */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
