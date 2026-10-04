@@ -409,3 +409,23 @@ button:focus-visible {
         grid-template-columns: 1fr;
     }
 }
+
+/* Respect users who prefer less motion: drop hover lifts and glows */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+
+    .btn:hover,
+    .proof-card:hover,
+    .teaser-card:hover,
+    .founder-chip:hover {
+        transform: none;
+    }
+}
