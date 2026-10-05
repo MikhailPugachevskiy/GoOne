@@ -1,4 +1,4 @@
-/* Design tokens: identisch zu landing.css, damit alle Kapitel gleich aussehen */
+/* Design tokens: same as landing.css so every chapter looks consistent */
 :root {
     --bg: #071411;
     --bg-elevated: #0e2420;
@@ -54,7 +54,7 @@ img {
     max-width: 100%;
 }
 
-/* Sichtbarer Tastaturfokus für alle Links und Buttons */
+/* Visible keyboard focus for all links and buttons */
 a:focus-visible,
 button:focus-visible {
     outline: 2px solid var(--accent);
@@ -123,7 +123,7 @@ button:focus-visible {
     text-shadow: 0 0 18px rgba(125, 255, 179, 0.45);
 }
 
-/* Hero: kürzer als auf der Landing Page, damit die Zahlenleiste schon sichtbar ist */
+/* Hero: shorter than the landing hero so the market figures peek into view */
 .hero {
     display: flex;
     flex-direction: column;
@@ -196,7 +196,7 @@ button:focus-visible {
     border-color: var(--accent);
 }
 
-/* Proof strip: vier Marktzahlen im Grid; auf dieser Seite sind die Werte länger (EUR 7–8bn) */
+/* Proof strip: four market figures in a CSS Grid; values are longer on this page (EUR 7–8bn) */
 .proof-strip {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -299,7 +299,7 @@ button:focus-visible {
     color: var(--muted);
 }
 
-/* Growth-Block: Chips tragen hier Kurztexte statt Namen, daher etwas breitere Basis */
+/* Growth row: chips carry short phrases, so the flex basis is wider than on landing */
 .founder-row {
     display: flex;
     flex-wrap: wrap;
