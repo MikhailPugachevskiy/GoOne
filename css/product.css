@@ -344,3 +344,65 @@ button:focus-visible {
 .text-link:hover {
     color: #c8ffe0;
 }
+
+/* Footer: Flexbox split between brand line and chapter shortcuts */
+.site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 6vw 2rem;
+    border-top: 1px solid var(--stroke);
+    color: var(--muted);
+}
+
+.site-footer nav {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.site-footer a {
+    text-decoration: none;
+    color: var(--muted);
+}
+
+.site-footer a:hover {
+    color: var(--accent);
+}
+
+/* Narrow screens: hamburger visible, grids collapse, hero height relaxes */
+@media (max-width: 800px) {
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .site-nav {
+        display: none;
+        position: absolute;
+        top: var(--header-h);
+        left: 0;
+        right: 0;
+        background: rgba(7, 20, 17, 0.96);
+        padding: 1rem 6vw 1.25rem;
+        border-bottom: 1px solid var(--stroke);
+    }
+
+    .site-nav.is-open {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 6vh;
+    }
+
+    .proof-strip,
+    .teaser-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
