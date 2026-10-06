@@ -406,3 +406,36 @@ button:focus-visible {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* Single column: the full-row rule for the last card is no longer needed */
+@media (max-width: 560px) {
+
+    .proof-strip,
+    .teaser-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teaser-card:last-child {
+        grid-column: auto;
+    }
+}
+
+/* Respect users who prefer less motion: drop hover lifts and glows */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+
+    .btn:hover,
+    .proof-card:hover,
+    .teaser-card:hover,
+    .founder-chip:hover {
+        transform: none;
+    }
+}
