@@ -239,3 +239,67 @@ button:focus-visible {
     color: var(--muted);
     font-size: 0.95rem;
 }
+
+/* Teaser grid: two columns for five step cards; the last card spans the full row so no gap is left */
+.teaser,
+.founders {
+    padding: 4vh 6vw 8vh;
+}
+
+.teaser h2,
+.founders h2 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.section-intro {
+    max-width: 68ch;
+    color: var(--muted);
+    margin: 0 0 2rem;
+}
+
+.teaser-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+}
+
+.teaser-card {
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.teaser-card:last-child {
+    grid-column: 1 / -1;
+}
+
+.teaser-card::after {
+    content: "";
+    position: absolute;
+    inset: auto -20% -40% auto;
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(circle, rgba(125, 255, 179, 0.35), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.teaser-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+}
+
+.teaser-card:hover::after {
+    opacity: 1;
+}
+
+.teaser-card h3 {
+    margin: 0 0 0.5rem;
+}
+
+.teaser-card p {
+    margin: 0;
+    color: var(--muted);
+}
