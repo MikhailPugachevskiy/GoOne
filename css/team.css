@@ -196,3 +196,47 @@ button:focus-visible {
 .btn-ghost:hover {
     border-color: var(--accent);
 }
+
+/* Proof strip: one role card per founder; the values are role titles (CEO, CMO, ...) with slightly wider letter spacing */
+.proof-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 0 6vw 6vh;
+}
+
+.proof-card,
+.teaser-card,
+.founder-chip {
+    background: var(--card);
+    border: 1px solid var(--stroke);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.proof-card {
+    padding: 1.4rem 1.2rem;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.proof-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 0 28px rgba(125, 255, 179, 0.14);
+}
+
+.proof-value {
+    margin: 0 0 0.4rem;
+    font-weight: 800;
+    font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+    line-height: 1.1;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    text-shadow: 0 0 22px rgba(125, 255, 179, 0.3);
+}
+
+.proof-label {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
