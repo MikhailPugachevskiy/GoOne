@@ -342,3 +342,29 @@ button:focus-visible {
 .text-link:hover {
     color: #c8ffe0;
 }
+
+/* Footer: Flexbox split between brand line and chapter shortcuts */
+.site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 6vw 2rem;
+    border-top: 1px solid var(--stroke);
+    color: var(--muted);
+}
+
+.site-footer nav {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.site-footer a {
+    text-decoration: none;
+    color: var(--muted);
+}
+
+.site-footer a:hover {
+    color: var(--accent);
+}
