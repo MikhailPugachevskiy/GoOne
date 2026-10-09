@@ -301,3 +301,44 @@ button:focus-visible {
     margin: 0;
     color: var(--muted);
 }
+
+/* Outlook row: four short milestones, so the chip basis stays wider than on landing */
+.founder-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.founder-chip {
+    flex: 1 1 220px;
+    padding: 1.1rem 1.2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.founder-chip:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 24px rgba(125, 255, 179, 0.16);
+}
+
+.founder-role {
+    margin: 0;
+    color: var(--accent);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.founder-name {
+    margin: 0.35rem 0 0;
+}
+
+.text-link {
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+}
+
+.text-link:hover {
+    color: #c8ffe0;
+}
