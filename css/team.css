@@ -368,3 +368,67 @@ button:focus-visible {
 .site-footer a:hover {
     color: var(--accent);
 }
+
+/* Narrow screens: hamburger visible, grids collapse, hero height relaxes */
+@media (max-width: 800px) {
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .site-nav {
+        display: none;
+        position: absolute;
+        top: var(--header-h);
+        left: 0;
+        right: 0;
+        background: rgba(7, 20, 17, 0.96);
+        padding: 1rem 6vw 1.25rem;
+        border-bottom: 1px solid var(--stroke);
+    }
+
+    .site-nav.is-open {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 6vh;
+    }
+
+    .proof-strip,
+    .teaser-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .proof-strip,
+    .teaser-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Respect users who prefer less motion: drop hover lifts and glows */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+
+    .btn:hover,
+    .proof-card:hover,
+    .teaser-card:hover,
+    .founder-chip:hover {
+        transform: none;
+    }
+}
