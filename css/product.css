@@ -773,3 +773,31 @@ button:focus-visible {
 .demo button.btn:disabled:hover {
     transform: none;
 }
+
+/* Narrow screens: steps become a compact row of numbers and titles above the panel */
+@media (max-width: 800px) {
+    .demo-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .demo-steps {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        gap: 0.4rem;
+    }
+
+    .demo-step-button {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 0.5rem 0.2rem;
+        text-align: center;
+    }
+
+    .demo-step-title {
+        font-size: 0.78rem;
+    }
+
+    .demo-step[data-state="current"] .demo-step-text {
+        display: none;
+    }
+}
