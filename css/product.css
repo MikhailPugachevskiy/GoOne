@@ -469,3 +469,84 @@ button:focus-visible {
     white-space: nowrap;
     border: 0;
 }
+
+/* Step list: finished steps are clickable, the current step shows its description */
+.demo-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.demo-step-button {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.2rem 0.8rem;
+    padding: 0.8rem 1rem;
+    text-align: left;
+    font: inherit;
+    color: var(--ink);
+    background: var(--card);
+    border: 1px solid var(--stroke);
+    border-radius: 14px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.demo-step-button:disabled {
+    cursor: default;
+    color: var(--muted);
+}
+
+.demo-step-button:not(:disabled):hover {
+    border-color: var(--accent);
+}
+
+.demo-step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    border: 1px solid var(--stroke);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+.demo-step-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+}
+
+.demo-step-text {
+    display: none;
+    grid-column: 2;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.demo-step[data-state="current"] .demo-step-button {
+    border-color: var(--accent);
+    color: var(--ink);
+    background: rgba(125, 255, 179, 0.08);
+}
+
+.demo-step[data-state="current"] .demo-step-number {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #062016;
+}
+
+.demo-step[data-state="current"] .demo-step-text {
+    display: block;
+}
+
+.demo-step[data-state="done"] .demo-step-number {
+    border-color: var(--accent);
+    color: var(--accent);
+}
