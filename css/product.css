@@ -550,3 +550,108 @@ button:focus-visible {
     border-color: var(--accent);
     color: var(--accent);
 }
+
+/* Panel: map, filters, list and the later steps live in one card */
+.demo-panel {
+    display: grid;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: var(--card);
+    border: 1px solid var(--stroke);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.demo-panel h3 {
+    margin: 0;
+}
+
+.demo-note {
+    margin: 0;
+    color: var(--accent);
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.demo-hint,
+.demo-insight,
+.demo-summary {
+    margin: 0;
+    color: var(--muted);
+}
+
+.demo-insight strong,
+.demo-summary strong {
+    color: var(--accent);
+}
+
+.demo-map {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--stroke);
+    border-radius: 12px;
+}
+
+.demo-marker {
+    cursor: pointer;
+    outline: none;
+}
+
+.demo-marker:focus-visible .demo-marker-dot {
+    stroke: var(--ink);
+    stroke-width: 4;
+}
+
+.demo-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.demo-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    font: inherit;
+    font-size: 0.92rem;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--stroke);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.demo-chip:hover,
+.demo-chip[aria-pressed="true"] {
+    color: var(--ink);
+    border-color: var(--accent);
+}
+
+.demo-chip[aria-pressed="true"] {
+    background: rgba(125, 255, 179, 0.12);
+}
+
+.demo-dot {
+    display: inline-block;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    flex: none;
+}
+
+.demo-list-title {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+}
+
+.demo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.4rem;
+}
