@@ -52,3 +52,70 @@ export function Demo() {
     const closestAll = closest(bikes);
     const closestVisible = closest(visibleBikes);
     const filterActive = selectedProviders.length > 0;
+
+    /* Payment takes a moment, then the flow moves on to the unlock step */
+    useEffect(() => {
+        if (!paying) {
+            return undefined;
+        }
+        const timer = window.setTimeout(() => {
+            setPaying(false);
+            setStep(5);
+        }, 900);
+        return () => window.clearTimeout(timer);
+    }, [paying]);
+
+    const applyProviders = (next: ProviderId[]) => {
+        setSelectedProviders(next);
+        if (selectedBike && next.length > 0 && !next.includes(selectedBike.provider)) {
+            /* The chosen bike is filtered out, so the choice starts again */
+            setSelectedId(null);
+            setStep(2);
+        } else if (step === 1) {
+            setStep(2);
+        }
+    };
+
+    const toggleProvider = (id: ProviderId) => {
+        applyProviders(
+            selectedProviders.includes(id)
+                ? selectedProviders.filter((item) => item !== id)
+                : [...selectedProviders, id]
+        );
+    };
+
+    const toggleLowest = () => {
+        setLowestPrice((value) => !value);
+        if (step === 1) {
+            setStep(2);
+        }
+    };
+
+    const selectBike = (id: string) => {
+        setSelectedId(id);
+        setStep(3);
+    };
+
+    const goToStep = (target: number) => {
+        if (target >= step || paying) {
+            return;
+        }
+        setStep(target);
+        if (target < 3) {
+            setSelectedId(null);
+        }
+    };
+
+    const reset = () => {
+        setSelectedProviders([]);
+        setLowestPrice(false);
+        setSelectedId(null);
+        setStep(1);
+        setPayMethod("card");
+        setPaying(false);
+    };
+
+    const hint =
+        step === 1
+            ? "Every dot is a bike from a different provider. Tap a filter or pick a bike."
+            : "Pick a bike on the map or from the list.";
