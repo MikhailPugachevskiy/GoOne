@@ -40,3 +40,45 @@ export function MapView({ bikes, selectedId, cheapestIds, onSelect }: MapViewPro
             <text x={MAP.user.x} y={MAP.user.y + 32} textAnchor="middle" fontSize="11" fill="var(--ink)">
                 You
             </text>
+
+            {bikes.map((bike) => {
+                const provider = providerById(bike.provider);
+                const isSelected = bike.id === selectedId;
+                const isCheapest = cheapestIds !== null && cheapestIds.has(bike.id);
+                const dimmed = cheapestIds !== null && !isCheapest;
+                const label = `${provider.name} bike, ${bike.distance} metres away, ${formatPrice(provider.pricePer30)} per 30 minutes`;
+
+                return (
+                    <g
+                        key={bike.id}
+                        className="demo-marker"
+                        role="button"
+                        tabIndex={0}
+                        aria-pressed={isSelected}
+                        aria-label={label}
+                        opacity={dimmed ? 0.3 : 1}
+                        onClick={() => onSelect(bike.id)}
+                        onKeyDown={(event) => {
+                            if (event.key === "Enter" || event.key === " ") {
+                                event.preventDefault();
+                                onSelect(bike.id);
+                            }
+                        }}
+                    >
+                        <title>{label}</title>
+                        <circle cx={bike.x} cy={bike.y} r="16" fill="transparent" />
+                        <circle
+                            className="demo-marker-dot"
+                            cx={bike.x}
+                            cy={bike.y}
+                            r={isSelected ? 12 : 9}
+                            fill={provider.color}
+                            stroke={isSelected ? "var(--ink)" : isCheapest ? "var(--accent)" : "#062016"}
+                            strokeWidth={isSelected ? 3.5 : isCheapest ? 3 : 2}
+                        />
+                    </g>
+                );
+            })}
+        </svg>
+    );
+}
