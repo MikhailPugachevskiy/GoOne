@@ -119,3 +119,80 @@ export function Demo() {
         step === 1
             ? "Every dot is a bike from a different provider. Tap a filter or pick a bike."
             : "Pick a bike on the map or from the list.";
+
+    return (
+        <div className="demo-layout">
+            <p className="demo-sr-only" role="status">
+                {`Step ${step} of ${steps.length}: ${steps[step - 1].title}`}
+            </p>
+
+            <Stepper current={step} locked={paying} onSelect={goToStep} />
+
+            <div className="demo-panel">
+                <p className="demo-note">Sample data, not live bikes</p>
+
+                {step <= 3 && (
+                    <>
+                        <p className="demo-hint">{hint}</p>
+                        <FilterBar
+                            selected={selectedProviders}
+                            lowestPrice={lowestPrice}
+                            onToggleProvider={toggleProvider}
+                            onClearProviders={() => applyProviders([])}
+                            onToggleLowest={toggleLowest}
+                        />
+                        <MapView
+                            bikes={visibleBikes}
+                            selectedId={selectedId}
+                            cheapestIds={cheapestIds}
+                            onSelect={selectBike}
+                        />
+                        <p className="demo-insight">
+                            {filterActive && closestVisible.distance !== closestAll.distance ? (
+                                <>
+                                    Closest bike in this filter: <strong>{closestVisible.distance} m</strong>.
+                                    Closest from any provider: <strong>{closestAll.distance} m</strong>.
+                                </>
+                            ) : (
+                                <>
+                                    Closest bike: <strong>{closestVisible.distance} m</strong> (
+                                    {providerById(closestVisible.provider).name}).
+                                </>
+                            )}
+                        </p>
+                        <BikeList
+                            bikes={sortedBikes}
+                            selectedId={selectedId}
+                            lowestPrice={lowestPrice}
+                            onSelect={selectBike}
+                        />
+                        {selectedBike && step === 3 && (
+                            <div className="demo-actions">
+                                <p className="demo-summary">
+                                    Selected: {providerById(selectedBike.provider).name}, {selectedBike.distance} m,{" "}
+                                    {formatPrice(bikePrice(selectedBike))}
+                                </p>
+                                <button type="button" className="btn btn-primary" onClick={() => setStep(4)}>
+                                    Continue to payment
+                                </button>
+                            </div>
+                        )}
+                    </>
+                )}
+
+                {step === 4 && selectedBike && (
+                    <Payment
+                        bike={selectedBike}
+                        method={payMethod}
+                        paying={paying}
+                        onMethod={setPayMethod}
+                        onPay={() => setPaying(true)}
+                        onBack={() => setStep(3)}
+                    />
+                )}
+
+                {step === 5 && selectedBike && <Unlock bike={selectedBike} onReset={reset} />}
+            </div>
+        </div>
+    );
+}
