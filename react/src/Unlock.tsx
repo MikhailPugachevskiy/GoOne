@@ -60,3 +60,50 @@ function buildCells(seed: number): Array<{ x: number; y: number }> {
     }
     return cells;
 }
+
+/* Step 5: a demo QR code and a four-digit lock code, both made up for this bike */
+export function Unlock({ bike, onReset }: UnlockProps) {
+    const provider = providerById(bike.provider);
+    const seed = hashString(bike.id);
+    const cells = useMemo(() => buildCells(seed), [seed]);
+    const code = String(1000 + (seed % 9000));
+    const size = GRID + QUIET * 2;
+
+    return (
+        <div className="demo-view">
+            <h3>Your {provider.name} bike is ready</h3>
+            <div className="demo-unlock">
+                <svg
+                    className="demo-qr"
+                    viewBox={`0 0 ${size} ${size}`}
+                    role="img"
+                    aria-label="Demo QR code, not scannable"
+                >
+                    <rect width={size} height={size} fill="#f4fff8" />
+                    {cells.map((cell) => (
+                        <rect
+                            key={`${cell.x}-${cell.y}`}
+                            x={cell.x + QUIET}
+                            y={cell.y + QUIET}
+                            width="1"
+                            height="1"
+                            fill="#062016"
+                        />
+                    ))}
+                </svg>
+                <div>
+                    <p className="demo-summary">Scan the QR code on the bike, then use this lock code:</p>
+                    <p className="demo-code" aria-label={`Lock code ${code.split("").join(" ")}`}>
+                        {code}
+                    </p>
+                </div>
+            </div>
+            <p className="demo-insight">Demo only: no real booking was made.</p>
+            <div className="demo-actions">
+                <button type="button" className="btn btn-primary" onClick={onReset}>
+                    Start over
+                </button>
+            </div>
+        </div>
+    );
+}
