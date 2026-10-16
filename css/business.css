@@ -531,3 +531,83 @@ button:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
 }
+
+/* Result cards: three key figures; the cash card turns warm when the funding falls short */
+.calc-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+}
+
+.calc-stat {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--stroke);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.calc-stat-label {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.calc-stat-value {
+    margin: 0.25rem 0 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+    overflow-wrap: anywhere;
+}
+
+.calc-stat[data-state="gap"] {
+    border-color: #ffb27d;
+}
+
+.calc-stat[data-state="gap"] .calc-stat-value {
+    color: #ffb27d;
+}
+
+.calc-verdict {
+    margin: 0;
+    padding-left: 0.8rem;
+    border-left: 3px solid var(--accent);
+    color: var(--ink);
+}
+
+.calc-verdict[data-state="gap"] {
+    border-left-color: #ffb27d;
+}
+
+.calc-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.2rem;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.calc-swatch {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-right: 0.35rem;
+    border-radius: 3px;
+    vertical-align: -1px;
+}
+
+.calc-swatch-pos {
+    background: var(--accent);
+}
+
+.calc-swatch-neg {
+    background: #ffb27d;
+}
+
+.calc-swatch-line {
+    height: 3px;
+    background: var(--ink);
+    vertical-align: 3px;
+}
