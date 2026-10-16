@@ -611,3 +611,98 @@ button:focus-visible {
     background: var(--ink);
     vertical-align: 3px;
 }
+
+/* Chart: SVG colours come from classes so the page tokens stay in one place */
+.calc-chart {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.calc-grid {
+    stroke: rgba(125, 255, 179, 0.12);
+    stroke-width: 1;
+}
+
+.calc-zero {
+    stroke: rgba(244, 255, 248, 0.55);
+    stroke-width: 1.5;
+}
+
+.calc-axis-text {
+    fill: var(--muted);
+    font-size: 12px;
+}
+
+.calc-bar-pos {
+    fill: var(--accent);
+}
+
+.calc-bar-neg {
+    fill: #ffb27d;
+}
+
+.calc-line {
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+}
+
+.calc-dot {
+    fill: var(--ink);
+}
+
+.calc-details summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.calc-table-wrap {
+    margin-top: 0.8rem;
+    overflow-x: auto;
+}
+
+.calc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.calc-table th,
+.calc-table td {
+    padding: 0.5rem 0.7rem;
+    text-align: right;
+    border-bottom: 1px solid var(--stroke);
+    white-space: nowrap;
+}
+
+.calc-table thead th {
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.calc-table th:first-child {
+    text-align: left;
+}
+
+.calc-note {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+/* Narrow screens: sliders above results, key figures stack */
+@media (max-width: 800px) {
+    .calc-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .calc-stats {
+        grid-template-columns: 1fr;
+    }
+}
