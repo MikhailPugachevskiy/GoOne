@@ -431,3 +431,38 @@ button:focus-visible {
         transform: none;
     }
 }
+
+/* Calculator section: interactive break-even calculator (see react/src/calculator), same tokens as the rest of the page */
+.calculator {
+    padding: 4vh 6vw 8vh;
+}
+
+.calculator h2 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.calc-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 320px) 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    margin-bottom: 1.5rem;
+}
+
+/* min-width: 0 lets the grid columns shrink, so a wide table scrolls inside its own box instead of widening the page */
+.calc-layout>*,
+.calc-results>* {
+    min-width: 0;
+}
+
+.calc-controls,
+.calc-results {
+    display: grid;
+    gap: 1.1rem;
+    padding: 1.3rem;
+    background: var(--card);
+    border: 1px solid var(--stroke);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
