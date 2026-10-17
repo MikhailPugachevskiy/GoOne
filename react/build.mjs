@@ -1,8 +1,7 @@
-/* Bundles the React demo into one plain script, so product.html also works when opened from disk */
+/* Bundles both React parts into plain scripts, so the pages also work when opened from disk */
 import { build } from "esbuild";
 
-await build({
-    entryPoints: ["src/main.tsx"],
+const shared = {
     bundle: true,
     minify: true,
     format: "iife",
@@ -11,6 +10,12 @@ await build({
     define: { "process.env.NODE_ENV": '"production"' },
     legalComments: "none",
     outfile: "../ts/product-demo.js"
-});
+};
 
-console.log("Built ../ts/product-demo.js");
+/* Interactive app demo on product.html */
+await build({ ...shared, entryPoints: ["src/main.tsx"], outfile: "../ts/product-demo.js" });
+
+/* Break-even calculator on business.html */
+await build({ ...shared, entryPoints: ["src/calculatorMain.tsx"], outfile: "../ts/business-calculator.js" });
+
+console.log("Built ../ts/product-demo.js and ../ts/business-calculator.js");
