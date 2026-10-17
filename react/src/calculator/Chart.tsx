@@ -45,3 +45,61 @@ export function Chart({ years }: ChartProps) {
     const summary = years
         .map((item) => `${item.year}: gross profit ${formatEuro(item.profit)}, cash ${formatEuro(item.cash)}`)
         .join("; ");
+
+    return (
+        <svg
+            className="calc-chart"
+            viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
+            role="img"
+            aria-label={`Gross profit per year and cash position. ${summary}`}
+        >
+            {ticks.map((tick) => (
+                <g key={tick}>
+                    <line
+                        className={tick === 0 ? "calc-zero" : "calc-grid"}
+                        x1={MARGIN.left}
+                        x2={WIDTH - MARGIN.right}
+                        y1={yOf(tick)}
+                        y2={yOf(tick)}
+                    />
+                    <text className="calc-axis-text" x={MARGIN.left - 8} y={yOf(tick) + 4} textAnchor="end">
+                        {formatThousands(tick)}
+                    </text>
+                </g>
+            ))}
+
+            {years.map((item, index) => {
+                const top = yOf(Math.max(item.profit, 0));
+                const bottom = yOf(Math.min(item.profit, 0));
+                return (
+                    <rect
+                        key={item.year}
+                        className={item.profit >= 0 ? "calc-bar-pos" : "calc-bar-neg"}
+                        x={xCenter(index) - barWidth / 2}
+                        y={top}
+                        width={barWidth}
+                        height={Math.max(bottom - top, 1)}
+                        rx="3"
+                    />
+                );
+            })}
+
+            <polyline className="calc-line" points={linePoints} />
+            {years.map((item, index) => (
+                <circle key={item.year} className="calc-dot" cx={xCenter(index)} cy={yOf(item.cash)} r="4" />
+            ))}
+
+            {years.map((item, index) => (
+                <text
+                    key={item.year}
+                    className="calc-axis-text"
+                    x={xCenter(index)}
+                    y={HEIGHT - 8}
+                    textAnchor="middle"
+                >
+                    {item.year}
+                </text>
+            ))}
+        </svg>
+    );
+}
