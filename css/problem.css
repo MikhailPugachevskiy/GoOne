@@ -16,6 +16,17 @@
     --font-body: "Source Sans 3", sans-serif;
 }
 
+/* Base page setup: dark canvas, readable type, room for the fixed header */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: var(--font-body);
