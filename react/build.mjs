@@ -8,8 +8,7 @@ const shared = {
     target: "es2020",
     jsx: "automatic",
     define: { "process.env.NODE_ENV": '"production"' },
-    legalComments: "none",
-    outfile: "../ts/product-demo.js"
+    legalComments: "none"
 };
 
 /* Interactive app demo on product.html */
