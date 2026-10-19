@@ -1,4 +1,4 @@
-* Sample data for the Go One demo: providers, bikes and the five product steps */
+/* Sample data for the Go One demo: providers, bikes and the five product steps */
 
 export type ProviderId = "nextbike" | "callabike" | "mobike" | "limebike";
 export type PayMethod = "card" | "paypal";
