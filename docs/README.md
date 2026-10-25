@@ -36,6 +36,16 @@ Diese zwei Dateien laufen auf allen Seiten. Sie brauchen kein React, nur Grundwi
 | [1. Das Menü](typescript/00-nav.md) | DOM, Ereignisse, Event-Delegation, Tastatur und Barrierefreiheit | `nav.ts` |
 | [2. Die Animationen](typescript/01-motion.md) | `IntersectionObserver`, `requestAnimationFrame`, Web Animations API, reguläre Ausdrücke | `motion.ts` |
 
+## CSS
+
+Alle sieben Seiten teilen ein gemeinsames Grundgerüst. Deshalb wird es einmal erklärt, danach nur noch, was jede Seite anders macht.
+
+| Kapitel | Inhalt | Dateien im Code |
+| --- | --- | --- |
+| [0. Grundlagen](css/00-grundlagen.md) | Selektoren, Kaskade, Variablen, Box-Modell, Flexbox, Grid, Media Queries | |
+| [1. Der gemeinsame Teil](css/01-gemeinsamer-teil.md) | `landing.css` Zeile für Zeile | `landing.css` (und der Großteil der anderen sechs) |
+| [2. Was jede Seite anders macht](css/02-unterschiede-der-seiten.md) | Unterschiede mit Begründung, `git diff` | `market.css`, `problem.css`, `solution.css`, `product.css`, `business.css`, `team.css` |
+
 ## So sind die Kapitel aufgebaut
 
 1. **Der Code** mit den Zeilennummern, wie er im Projekt steht.
@@ -49,6 +59,6 @@ Diese zwei Dateien laufen auf allen Seiten. Sie brauchen kein React, nur Grundwi
 
 Weitere Kapitel für die restlichen Teile des Projekts:
 
-- CSS (gemeinsame Bausteine, Grid und Flexbox, Media Queries)
+- CSS der App-Demo (`product.css` ab Zeile 443) und des Rechners (`business.css` ab Zeile 435)
 - HTML-Struktur und Barrierefreiheit
 - Build, `tsconfig.json`, `.gitignore` und Git
