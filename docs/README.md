@@ -25,7 +25,16 @@ Setzt die Kapitel der App-Demo voraus, vor allem Kapitel 0 (Grundlagen) und 5 (S
 | [1. Das Rechenmodell](rechner/00-modell.md) | die ganze Rechnung, Rechenbeispiel, `map`, `find`, `reduce`, Formatierung | `model.ts` |
 | [2. Regler und Tabelle](rechner/01-regler-und-tabelle.md) | Schieberegler, `Partial<...>`, zugängliche Tabelle | `Controls.tsx`, `ResultTable.tsx` |
 | [3. Das Diagramm](rechner/02-diagramm.md) | von Hand gezeichnetes SVG, Umrechnung von Beträgen in Koordinaten | `Chart.tsx` |
-| [4. Der Zusammenbau](rechner/03-zusammenbau.md) | ein Zustandsobjekt, Datenfluss, Einstiegsdatei | `Calculator.tsx`, `calculatorMain.tsx`
+| [4. Der Zusammenbau](rechner/03-zusammenbau.md) | ein Zustandsobjekt, Datenfluss, Einstiegsdatei | `Calculator.tsx`, `calculatorMain.tsx` |
+
+## TypeScript für Menü und Animationen
+
+Diese zwei Dateien laufen auf allen Seiten. Sie brauchen kein React, nur Grundwissen über das DOM.
+
+| Kapitel | Inhalt | Dateien im Code |
+| --- | --- | --- |
+| [1. Das Menü](typescript/00-nav.md) | DOM, Ereignisse, Event-Delegation, Tastatur und Barrierefreiheit | `nav.ts` |
+| [2. Die Animationen](typescript/01-motion.md) | `IntersectionObserver`, `requestAnimationFrame`, Web Animations API, reguläre Ausdrücke | `motion.ts` |
 
 ## So sind die Kapitel aufgebaut
 
@@ -40,7 +49,6 @@ Setzt die Kapitel der App-Demo voraus, vor allem Kapitel 0 (Grundlagen) und 5 (S
 
 Weitere Kapitel für die restlichen Teile des Projekts:
 
-- TypeScript für Menü und Animationen (`nav.ts`, `motion.ts`)
 - CSS (gemeinsame Bausteine, Grid und Flexbox, Media Queries)
 - HTML-Struktur und Barrierefreiheit
 - Build, `tsconfig.json`, `.gitignore` und Git
