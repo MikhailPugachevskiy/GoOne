@@ -16,6 +16,17 @@ Lies die Kapitel in dieser Reihenfolge:
 | [4. Bezahlen und Entsperren](react-demo/04-bezahlen-und-entsperren.md) | kontrollierte Formulare, Zufallsgenerator, Demo-QR-Code | `Payment.tsx`, `Unlock.tsx` |
 | [5. Der Kern](react-demo/05-demo.md) | State, `useMemo`, `useEffect`, alle Klick-Funktionen | `Demo.tsx` |
 
+## Der Break-even-Rechner (React und TypeScript)
+
+Setzt die Kapitel der App-Demo voraus, vor allem Kapitel 0 (Grundlagen) und 5 (State und `useMemo`).
+
+| Kapitel | Inhalt | Dateien im Code |
+| --- | --- | --- |
+| [1. Das Rechenmodell](rechner/00-modell.md) | die ganze Rechnung, Rechenbeispiel, `map`, `find`, `reduce`, Formatierung | `model.ts` |
+| [2. Regler und Tabelle](rechner/01-regler-und-tabelle.md) | Schieberegler, `Partial<...>`, zugängliche Tabelle | `Controls.tsx`, `ResultTable.tsx` |
+| [3. Das Diagramm](rechner/02-diagramm.md) | von Hand gezeichnetes SVG, Umrechnung von Beträgen in Koordinaten | `Chart.tsx` |
+| [4. Der Zusammenbau](rechner/03-zusammenbau.md) | ein Zustandsobjekt, Datenfluss, Einstiegsdatei | `Calculator.tsx`, `calculatorMain.tsx`
+
 ## So sind die Kapitel aufgebaut
 
 1. **Der Code** mit den Zeilennummern, wie er im Projekt steht.
@@ -29,7 +40,6 @@ Lies die Kapitel in dieser Reihenfolge:
 
 Weitere Kapitel für die restlichen Teile des Projekts:
 
-- Break-even-Rechner (React und TypeScript)
 - TypeScript für Menü und Animationen (`nav.ts`, `motion.ts`)
 - CSS (gemeinsame Bausteine, Grid und Flexbox, Media Queries)
 - HTML-Struktur und Barrierefreiheit
