@@ -47,6 +47,15 @@ Alle sieben Seiten teilen ein gemeinsames Grundgerüst. Deshalb wird es einmal e
 | [2. Was jede Seite anders macht](css/02-unterschiede-der-seiten.md) | Unterschiede mit Begründung, `git diff` | `market.css`, `problem.css`, `solution.css`, `product.css`, `business.css`, `team.css` |
 | [3. Demo und Rechner](css/03-demo-und-rechner.md) | Eltern-Selektor `:has()`, Attributselektoren, Schieberegler, SVG-Farben, Tabellen | `product.css` ab Zeile 443, `business.css` ab Zeile 435 |
 
+## Build, Konfiguration und Git
+
+Wie aus dem Quellcode die Dateien werden, die der Browser lädt, und wie das Repository organisiert ist.
+
+| Kapitel | Inhalt | Dateien im Code |
+| --- | --- | --- |
+| [1. Werkzeuge und `npm run build`](build/00-werkzeuge-und-build.md) | npm, esbuild, `tsc`, die zwei `tsconfig.json`, Lock-Datei, Befehle | `package.json`, `package-lock.json`, `build.mjs`, beide `tsconfig.json` |
+| [2. Git und Veröffentlichung](build/01-git-und-veroeffentlichung.md) | `.gitignore`, `.gitattributes`, `index.html`, GitHub Pages, warum Bündel im Repository liegen | `.gitignore`, `.gitattributes`, `index.html` |
+
 ## So sind die Kapitel aufgebaut
 
 1. **Der Code** mit den Zeilennummern, wie er im Projekt steht.
@@ -61,4 +70,4 @@ Alle sieben Seiten teilen ein gemeinsames Grundgerüst. Deshalb wird es einmal e
 Weitere Kapitel für die restlichen Teile des Projekts:
 
 - HTML-Struktur und Barrierefreiheit
-- Build, `tsconfig.json`, `.gitignore` und Git
+
