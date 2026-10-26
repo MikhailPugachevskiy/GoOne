@@ -45,6 +45,7 @@ Alle sieben Seiten teilen ein gemeinsames Grundgerüst. Deshalb wird es einmal e
 | [0. Grundlagen](css/00-grundlagen.md) | Selektoren, Kaskade, Variablen, Box-Modell, Flexbox, Grid, Media Queries | |
 | [1. Der gemeinsame Teil](css/01-gemeinsamer-teil.md) | `landing.css` Zeile für Zeile | `landing.css` (und der Großteil der anderen sechs) |
 | [2. Was jede Seite anders macht](css/02-unterschiede-der-seiten.md) | Unterschiede mit Begründung, `git diff` | `market.css`, `problem.css`, `solution.css`, `product.css`, `business.css`, `team.css` |
+| [3. Demo und Rechner](css/03-demo-und-rechner.md) | Eltern-Selektor `:has()`, Attributselektoren, Schieberegler, SVG-Farben, Tabellen | `product.css` ab Zeile 443, `business.css` ab Zeile 435 |
 
 ## So sind die Kapitel aufgebaut
 
@@ -59,6 +60,5 @@ Alle sieben Seiten teilen ein gemeinsames Grundgerüst. Deshalb wird es einmal e
 
 Weitere Kapitel für die restlichen Teile des Projekts:
 
-- CSS der App-Demo (`product.css` ab Zeile 443) und des Rechners (`business.css` ab Zeile 435)
 - HTML-Struktur und Barrierefreiheit
 - Build, `tsconfig.json`, `.gitignore` und Git
