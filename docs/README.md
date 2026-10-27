@@ -56,6 +56,16 @@ Wie aus dem Quellcode die Dateien werden, die der Browser lädt, und wie das Rep
 | [1. Werkzeuge und `npm run build`](build/00-werkzeuge-und-build.md) | npm, esbuild, `tsc`, die zwei `tsconfig.json`, Lock-Datei, Befehle | `package.json`, `package-lock.json`, `build.mjs`, beide `tsconfig.json` |
 | [2. Git und Veröffentlichung](build/01-git-und-veroeffentlichung.md) | `.gitignore`, `.gitattributes`, `index.html`, GitHub Pages, warum Bündel im Repository liegen | `.gitignore`, `.gitattributes`, `index.html` |
 
+## HTML
+
+Alle sieben Seiten teilen dasselbe Gerüst. Es wird einmal ausführlich erklärt, danach nur noch, was jede Seite anders macht.
+
+| Kapitel | Inhalt | Dateien im Code |
+| --- | --- | --- |
+| [0. Grundlagen](html/00-grundlagen.md) | Elemente, Attribute, semantisches HTML, Überschriften, ARIA, Pfade | |
+| [1. Eine Seite Zeile für Zeile](html/01-landing.md) | Kopf, Menü, Abschnitte, Karten, Fußzeile, Skripte | `landing.html` (und das Gerüst aller sieben Seiten) |
+| [2. Was jede Seite anders macht](html/02-unterschiede-der-seiten.md) | Titel, Weg durch das Pitch, Plätze für React, Auffälligkeiten | alle Seiten, besonders `product.html` und `business.html` |
+
 ## So sind die Kapitel aufgebaut
 
 1. **Der Code** mit den Zeilennummern, wie er im Projekt steht.
@@ -65,9 +75,5 @@ Wie aus dem Quellcode die Dateien werden, die der Browser lädt, und wie das Rep
 
 **Zu den Zeilennummern:** Sie stimmen für den Stand des Codes, als die Kapitel geschrieben wurden. Wenn du die Dateien später änderst, verschieben sie sich. Der Codeausschnitt steht aber immer direkt über den Erklärungen, damit man die Zuordnung auch dann findet.
 
-## Geplant
 
-Weitere Kapitel für die restlichen Teile des Projekts:
-
-- HTML-Struktur und Barrierefreiheit
 
